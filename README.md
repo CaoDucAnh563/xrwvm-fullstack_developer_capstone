@@ -1,18 +1,21 @@
-# fullstack_developer_capstone
+# Best Cars Dealership — Full-Stack Developer Capstone
 
-This is a comprehensive national car retailer web application built as part of the Capstone project. The platform allows users to browse car dealerships, read reviews, and post their own feedback.
+## Project Details
+- **Project Name:** Best Cars Dealership Management & Review Portal
+- **Project Type:** Full-Stack Cloud Native Web Application (Capstone Project)
+- **Description:** A comprehensive national car retailer web application that allows users to browse car dealerships across different states, view dealership details, read customer reviews with automated sentiment analysis, and post their own feedback.
 
 ## Tech Stack
-- **Frontend:** React, HTML, CSS
+- **Frontend:** React, HTML5, CSS3, Bootstrap
 - **Backend:** Django, Node.js (Express), Flask
 - **Databases:** MongoDB, SQLite
-- **DevOps:** Docker, Kubernetes, IBM Cloud Code Engine, GitHub Actions (CI/CD)
+- **DevOps & Deployment:** Docker, Kubernetes, IBM Cloud Code Engine, GitHub Actions (CI/CD)
 
-## Features
-- Microservices Architecture
-- Sentiment Analysis for customer reviews
-- User Authentication (Login, Logout, Register)
-- Responsive Design
+## Key Features
+- **Microservices Architecture:** Decoupled backend services for dealership data, review management, and sentiment analysis.
+- **Sentiment Analysis:** Real-time NLP evaluation (Positive, Neutral, Negative) for customer reviews.
+- **User Authentication:** Secure user registration, login, and logout flows integrated across Django and React.
+- **Responsive Design:** Multi-page navigation including Home, About Us, Contact Us, and dynamic dealership views.
 
 ## Getting Started
-To run the project locally, you need to set up the Django server, Node.js microservices, and Flask sentiment analysis service. Detailed instructions can be found in the respective directories.
+To run the project locally, set up and start the Django server, Node.js/MongoDB dealership microservice, and Flask sentiment analyzer service. Detailed configuration steps are available in the respective directories.
