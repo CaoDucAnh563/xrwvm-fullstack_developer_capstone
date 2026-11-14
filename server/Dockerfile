@@ -5,6 +5,8 @@ COPY frontend/package*.json ./
 RUN npm install --legacy-peer-deps
 COPY frontend/ ./
 RUN CI=false npm run build
+
+# Giai đoạn 2: Chạy ứng dụng Django
 FROM python:3.10-slim
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
