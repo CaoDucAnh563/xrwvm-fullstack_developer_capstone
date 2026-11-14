@@ -1,10 +1,9 @@
+(djangoenv) theia@theiadocker-caoducanh713:/home/project/xrwvm-fullstack_developer_capstone/server$ python3 manage.py runserver
 Watching for file changes with StatReloader
 Performing system checks...
 
 System check identified no issues (0 silenced).
-September 25, 2023 - 10:00:00
-Django version 4.2.5, using settings 'dealership.settings'
+November 14, 2026 - 12:58:54
+Django version 5.2.19, using settings 'djangoproj.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
-[25/Sep/2023 10:01:05] "GET / HTTP/1.1" 200 4532
-[25/Sep/2023 10:01:10] "GET /djangoapp/get_dealers HTTP/1.1" 200 2451

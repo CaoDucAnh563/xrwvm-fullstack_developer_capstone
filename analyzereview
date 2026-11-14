@@ -1,5 +1,2 @@
-curl -X GET http://localhost:8000/djangoapp/get_sentiment/Fantastic%20services
-
-{
-  "sentiment": "positive"
-}
+curl http://localhost:5050/analyze/Fantastic%20services
+{"sentiment": "positive"}

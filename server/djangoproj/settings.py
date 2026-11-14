@@ -143,4 +143,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'frontend/build'),
     os.path.join(BASE_DIR, 'frontend/build/static'),
 ]
-
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.proxy.cognitiveclass.ai',
+    'https://*.cognitiveclass.ai',
+]
