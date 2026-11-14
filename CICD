@@ -1,21 +1,676 @@
-Run actions/checkout@v3
-  with:
-    repository: user/cars-dealership
-    token: ***
-    fetch-depth: 1
-...
-Run actions/setup-python@v4
-...
-Run python -m pip install --upgrade pip
-...
-Run flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-0
-...
-Run actions/setup-node@v3
-...
-Run cd server/frontend
-...
-Run npm run build --if-present
-
-Successfully built the application!
-All steps completed successfully.
+2026-11-14T17:36:25.7743901Z Current runner version: '2.338.2'
+2026-11-14T17:36:25.7768326Z ##[group]Runner Image Provisioner
+2026-11-14T17:36:25.7769335Z Hosted Compute Agent
+2026-11-14T17:36:25.7769946Z Version: 20261103.629
+2026-11-14T17:36:25.7770584Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+2026-11-14T17:36:25.7771400Z Build Date: 2026-11-03T17:26:59Z
+2026-11-14T17:36:25.7772148Z Worker ID: {d9ef2f2e-237e-461e-b2ae-8abb3d6829c7}
+2026-11-14T17:36:25.7772898Z Region: westus2
+2026-11-14T17:36:25.7773471Z Cloud: Azure
+2026-11-14T17:36:25.7774016Z ##[endgroup]
+2026-11-14T17:36:25.7775585Z ##[group]Operating System
+2026-11-14T17:36:25.7776283Z Ubuntu
+2026-11-14T17:36:25.7777068Z 26.04.1
+2026-11-14T17:36:25.7777630Z LTS
+2026-11-14T17:36:25.7778143Z ##[endgroup]
+2026-11-14T17:36:25.7778756Z ##[group]Runner Image
+2026-11-14T17:36:25.7779403Z Image: ubuntu-26.04
+2026-11-14T17:36:25.7779968Z Version: 20261111.196.1
+2026-11-14T17:36:25.7781322Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261111.196/images/ubuntu/Ubuntu2604-Readme.md
+2026-11-14T17:36:25.7782937Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261111.196
+2026-11-14T17:36:25.7783942Z ##[endgroup]
+2026-11-14T17:36:25.7785595Z ##[group]GITHUB_TOKEN Permissions
+2026-11-14T17:36:25.7787843Z Contents: read
+2026-11-14T17:36:25.7788504Z Metadata: read
+2026-11-14T17:36:25.7789258Z Packages: read
+2026-11-14T17:36:25.7789833Z ##[endgroup]
+2026-11-14T17:36:25.7791949Z Secret source: Actions
+2026-11-14T17:36:25.7792890Z Cache mode: write
+2026-11-14T17:36:25.7793679Z Prepare workflow directory
+2026-11-14T17:36:25.8166109Z Prepare all required actions
+2026-11-14T17:36:25.8230959Z Getting action download info
+2026-11-14T17:36:26.1810805Z Download action repository 'actions/checkout@v3' (SHA:a37ce9120846195fa4ece8f58b268e6043cb2f26)
+2026-11-14T17:36:26.3070078Z Download action repository 'actions/setup-python@v4' (SHA:7f4fc3e22c37d6ff65e88745f38bd3157c663f7c)
+2026-11-14T17:36:26.3922965Z Download action repository 'actions/setup-node@v3' (SHA:3235b876344d2a9aa001b8d1453c930bba69e610)
+2026-11-14T17:36:26.6019927Z Complete job name: build
+2026-11-14T17:36:26.6994248Z ##[group]Run actions/checkout@v3
+2026-11-14T17:36:26.6995149Z with:
+2026-11-14T17:36:26.6995740Z   repository: CaoDucAnh563/xrwvm-fullstack_developer_capstone
+2026-11-14T17:36:26.6999927Z   token: ***
+2026-11-14T17:36:26.7000400Z   ssh-strict: true
+2026-11-14T17:36:26.7000877Z   persist-credentials: true
+2026-11-14T17:36:26.7001381Z   clean: true
+2026-11-14T17:36:26.7001838Z   sparse-checkout-cone-mode: true
+2026-11-14T17:36:26.7002372Z   fetch-depth: 1
+2026-11-14T17:36:26.7002815Z   fetch-tags: false
+2026-11-14T17:36:26.7003249Z   lfs: false
+2026-11-14T17:36:26.7003664Z   submodules: false
+2026-11-14T17:36:26.7004125Z   set-safe-directory: true
+2026-11-14T17:36:26.7004645Z   allow-unsafe-pr-checkout: false
+2026-11-14T17:36:26.7005496Z ##[endgroup]
+2026-11-14T17:36:26.9406005Z (node:2784) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-14T17:36:26.9408249Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-14T17:36:26.9488514Z Syncing repository: CaoDucAnh563/xrwvm-fullstack_developer_capstone
+2026-11-14T17:36:26.9490409Z ##[group]Getting Git version info
+2026-11-14T17:36:26.9491722Z Working directory is '/home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone'
+2026-11-14T17:36:26.9493774Z [command]/usr/bin/git version
+2026-11-14T17:36:26.9499171Z git version 2.56.1
+2026-11-14T17:36:26.9520641Z ##[endgroup]
+2026-11-14T17:36:26.9533371Z Temporarily overriding HOME='/home/runner/work/_temp/3b7d215f-d26b-4013-b87c-18772c2f3f97' before making global git config changes
+2026-11-14T17:36:26.9534804Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-14T17:36:26.9537285Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone
+2026-11-14T17:36:26.9594872Z Deleting the contents of '/home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone'
+2026-11-14T17:36:26.9597535Z ##[group]Initializing the repository
+2026-11-14T17:36:26.9601782Z [command]/usr/bin/git init /home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone
+2026-11-14T17:36:26.9709213Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-14T17:36:26.9710700Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-14T17:36:26.9711969Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-14T17:36:26.9712762Z hint: call:
+2026-11-14T17:36:26.9713438Z hint:
+2026-11-14T17:36:26.9713985Z hint: 	git config --global init.defaultBranch <name>
+2026-11-14T17:36:26.9714657Z hint:
+2026-11-14T17:36:26.9715280Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-14T17:36:26.9716423Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-14T17:36:26.9717481Z hint:
+2026-11-14T17:36:26.9718053Z hint: 	git branch -m <name>
+2026-11-14T17:36:26.9718573Z hint:
+2026-11-14T17:36:26.9719240Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-14T17:36:26.9723087Z Initialized empty Git repository in /home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone/.git/
+2026-11-14T17:36:26.9733783Z [command]/usr/bin/git remote add origin https://github.com/CaoDucAnh563/xrwvm-fullstack_developer_capstone
+2026-11-14T17:36:26.9782299Z ##[endgroup]
+2026-11-14T17:36:26.9783649Z ##[group]Disabling automatic garbage collection
+2026-11-14T17:36:26.9785394Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-14T17:36:26.9816953Z ##[endgroup]
+2026-11-14T17:36:26.9819065Z ##[group]Setting up auth
+2026-11-14T17:36:26.9823070Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-14T17:36:26.9854551Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-14T17:36:27.0267817Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-14T17:36:27.0297635Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-14T17:36:27.0576100Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-14T17:36:27.0614824Z ##[endgroup]
+2026-11-14T17:36:27.0616042Z ##[group]Fetching the repository
+2026-11-14T17:36:27.0627450Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +33220cfd8cbae90f4e6bffa432d702f63b625792:refs/remotes/origin/main
+2026-11-14T17:36:27.3368471Z remote: Enumerating objects: 111, done.        
+2026-11-14T17:36:27.3370131Z remote: Counting objects:   0% (1/111)        
+2026-11-14T17:36:27.3371284Z remote: Counting objects:   1% (2/111)        
+2026-11-14T17:36:27.3372260Z remote: Counting objects:   2% (3/111)        
+2026-11-14T17:36:27.3373137Z remote: Counting objects:   3% (4/111)        
+2026-11-14T17:36:27.3374004Z remote: Counting objects:   4% (5/111)        
+2026-11-14T17:36:27.3374858Z remote: Counting objects:   5% (6/111)        
+2026-11-14T17:36:27.3375706Z remote: Counting objects:   6% (7/111)        
+2026-11-14T17:36:27.3376804Z remote: Counting objects:   7% (8/111)        
+2026-11-14T17:36:27.3377937Z remote: Counting objects:   8% (9/111)        
+2026-11-14T17:36:27.3378662Z remote: Counting objects:   9% (10/111)        
+2026-11-14T17:36:27.3379378Z remote: Counting objects:  10% (12/111)        
+2026-11-14T17:36:27.3380100Z remote: Counting objects:  11% (13/111)        
+2026-11-14T17:36:27.3380801Z remote: Counting objects:  12% (14/111)        
+2026-11-14T17:36:27.3381801Z remote: Counting objects:  13% (15/111)        
+2026-11-14T17:36:27.3382463Z remote: Counting objects:  14% (16/111)        
+2026-11-14T17:36:27.3383095Z remote: Counting objects:  15% (17/111)        
+2026-11-14T17:36:27.3383723Z remote: Counting objects:  16% (18/111)        
+2026-11-14T17:36:27.3384341Z remote: Counting objects:  17% (19/111)        
+2026-11-14T17:36:27.3384957Z remote: Counting objects:  18% (20/111)        
+2026-11-14T17:36:27.3385576Z remote: Counting objects:  19% (22/111)        
+2026-11-14T17:36:27.3386204Z remote: Counting objects:  20% (23/111)        
+2026-11-14T17:36:27.3387110Z remote: Counting objects:  21% (24/111)        
+2026-11-14T17:36:27.3387851Z remote: Counting objects:  22% (25/111)        
+2026-11-14T17:36:27.3388477Z remote: Counting objects:  23% (26/111)        
+2026-11-14T17:36:27.3389294Z remote: Counting objects:  24% (27/111)        
+2026-11-14T17:36:27.3390454Z remote: Counting objects:  25% (28/111)        
+2026-11-14T17:36:27.3391653Z remote: Counting objects:  26% (29/111)        
+2026-11-14T17:36:27.3392452Z remote: Counting objects:  27% (30/111)        
+2026-11-14T17:36:27.3393105Z remote: Counting objects:  28% (32/111)        
+2026-11-14T17:36:27.3393737Z remote: Counting objects:  29% (33/111)        
+2026-11-14T17:36:27.3394353Z remote: Counting objects:  30% (34/111)        
+2026-11-14T17:36:27.3394976Z remote: Counting objects:  31% (35/111)        
+2026-11-14T17:36:27.3395594Z remote: Counting objects:  32% (36/111)        
+2026-11-14T17:36:27.3396213Z remote: Counting objects:  33% (37/111)        
+2026-11-14T17:36:27.3397169Z remote: Counting objects:  34% (38/111)        
+2026-11-14T17:36:27.3397803Z remote: Counting objects:  35% (39/111)        
+2026-11-14T17:36:27.3398422Z remote: Counting objects:  36% (40/111)        
+2026-11-14T17:36:27.3399037Z remote: Counting objects:  37% (42/111)        
+2026-11-14T17:36:27.3399659Z remote: Counting objects:  38% (43/111)        
+2026-11-14T17:36:27.3400278Z remote: Counting objects:  39% (44/111)        
+2026-11-14T17:36:27.3401091Z remote: Counting objects:  40% (45/111)        
+2026-11-14T17:36:27.3401734Z remote: Counting objects:  41% (46/111)        
+2026-11-14T17:36:27.3402353Z remote: Counting objects:  42% (47/111)        
+2026-11-14T17:36:27.3402972Z remote: Counting objects:  43% (48/111)        
+2026-11-14T17:36:27.3403608Z remote: Counting objects:  44% (49/111)        
+2026-11-14T17:36:27.3404231Z remote: Counting objects:  45% (50/111)        
+2026-11-14T17:36:27.3404841Z remote: Counting objects:  46% (52/111)        
+2026-11-14T17:36:27.3405457Z remote: Counting objects:  47% (53/111)        
+2026-11-14T17:36:27.3406079Z remote: Counting objects:  48% (54/111)        
+2026-11-14T17:36:27.3406821Z remote: Counting objects:  49% (55/111)        
+2026-11-14T17:36:27.3407438Z remote: Counting objects:  50% (56/111)        
+2026-11-14T17:36:27.3408052Z remote: Counting objects:  51% (57/111)        
+2026-11-14T17:36:27.3408664Z remote: Counting objects:  52% (58/111)        
+2026-11-14T17:36:27.3409294Z remote: Counting objects:  53% (59/111)        
+2026-11-14T17:36:27.3409910Z remote: Counting objects:  54% (60/111)        
+2026-11-14T17:36:27.3410523Z remote: Counting objects:  55% (62/111)        
+2026-11-14T17:36:27.3411143Z remote: Counting objects:  56% (63/111)        
+2026-11-14T17:36:27.3411760Z remote: Counting objects:  57% (64/111)        
+2026-11-14T17:36:27.3412376Z remote: Counting objects:  58% (65/111)        
+2026-11-14T17:36:27.3412991Z remote: Counting objects:  59% (66/111)        
+2026-11-14T17:36:27.3413656Z remote: Counting objects:  60% (67/111)        
+2026-11-14T17:36:27.3414269Z remote: Counting objects:  61% (68/111)        
+2026-11-14T17:36:27.3414877Z remote: Counting objects:  62% (69/111)        
+2026-11-14T17:36:27.3416049Z remote: Counting objects:  63% (70/111)        
+2026-11-14T17:36:27.3417448Z remote: Counting objects:  64% (72/111)        
+2026-11-14T17:36:27.3418505Z remote: Counting objects:  65% (73/111)        
+2026-11-14T17:36:27.3419533Z remote: Counting objects:  66% (74/111)        
+2026-11-14T17:36:27.3420185Z remote: Counting objects:  67% (75/111)        
+2026-11-14T17:36:27.3420818Z remote: Counting objects:  68% (76/111)        
+2026-11-14T17:36:27.3421446Z remote: Counting objects:  69% (77/111)        
+2026-11-14T17:36:27.3422071Z remote: Counting objects:  70% (78/111)        
+2026-11-14T17:36:27.3422694Z remote: Counting objects:  71% (79/111)        
+2026-11-14T17:36:27.3423311Z remote: Counting objects:  72% (80/111)        
+2026-11-14T17:36:27.3423929Z remote: Counting objects:  73% (82/111)        
+2026-11-14T17:36:27.3424615Z remote: Counting objects:  74% (83/111)        
+2026-11-14T17:36:27.3425252Z remote: Counting objects:  75% (84/111)        
+2026-11-14T17:36:27.3425870Z remote: Counting objects:  76% (85/111)        
+2026-11-14T17:36:27.3426714Z remote: Counting objects:  77% (86/111)        
+2026-11-14T17:36:27.3427394Z remote: Counting objects:  78% (87/111)        
+2026-11-14T17:36:27.3428029Z remote: Counting objects:  79% (88/111)        
+2026-11-14T17:36:27.3428655Z remote: Counting objects:  80% (89/111)        
+2026-11-14T17:36:27.3429277Z remote: Counting objects:  81% (90/111)        
+2026-11-14T17:36:27.3429885Z remote: Counting objects:  82% (92/111)        
+2026-11-14T17:36:27.3430503Z remote: Counting objects:  83% (93/111)        
+2026-11-14T17:36:27.3431123Z remote: Counting objects:  84% (94/111)        
+2026-11-14T17:36:27.3431756Z remote: Counting objects:  85% (95/111)        
+2026-11-14T17:36:27.3432365Z remote: Counting objects:  86% (96/111)        
+2026-11-14T17:36:27.3432975Z remote: Counting objects:  87% (97/111)        
+2026-11-14T17:36:27.3433586Z remote: Counting objects:  88% (98/111)        
+2026-11-14T17:36:27.3434201Z remote: Counting objects:  89% (99/111)        
+2026-11-14T17:36:27.3434840Z remote: Counting objects:  90% (100/111)        
+2026-11-14T17:36:27.3435466Z remote: Counting objects:  91% (102/111)        
+2026-11-14T17:36:27.3436102Z remote: Counting objects:  92% (103/111)        
+2026-11-14T17:36:27.3437123Z remote: Counting objects:  93% (104/111)        
+2026-11-14T17:36:27.3437787Z remote: Counting objects:  94% (105/111)        
+2026-11-14T17:36:27.3438415Z remote: Counting objects:  95% (106/111)        
+2026-11-14T17:36:27.3439035Z remote: Counting objects:  96% (107/111)        
+2026-11-14T17:36:27.3439658Z remote: Counting objects:  97% (108/111)        
+2026-11-14T17:36:27.3440288Z remote: Counting objects:  98% (109/111)        
+2026-11-14T17:36:27.3440904Z remote: Counting objects:  99% (110/111)        
+2026-11-14T17:36:27.3441518Z remote: Counting objects: 100% (111/111)        
+2026-11-14T17:36:27.3442175Z remote: Counting objects: 100% (111/111), done.        
+2026-11-14T17:36:27.3442846Z remote: Compressing objects:   0% (1/102)        
+2026-11-14T17:36:27.3443496Z remote: Compressing objects:   1% (2/102)        
+2026-11-14T17:36:27.3444139Z remote: Compressing objects:   2% (3/102)        
+2026-11-14T17:36:27.3444780Z remote: Compressing objects:   3% (4/102)        
+2026-11-14T17:36:27.3445427Z remote: Compressing objects:   4% (5/102)        
+2026-11-14T17:36:27.3446064Z remote: Compressing objects:   5% (6/102)        
+2026-11-14T17:36:27.3446927Z remote: Compressing objects:   6% (7/102)        
+2026-11-14T17:36:27.3448039Z remote: Compressing objects:   7% (8/102)        
+2026-11-14T17:36:27.3449262Z remote: Compressing objects:   8% (9/102)        
+2026-11-14T17:36:27.3450459Z remote: Compressing objects:   9% (10/102)        
+2026-11-14T17:36:27.3451618Z remote: Compressing objects:  10% (11/102)        
+2026-11-14T17:36:27.3452675Z remote: Compressing objects:  11% (12/102)        
+2026-11-14T17:36:27.3453753Z remote: Compressing objects:  12% (13/102)        
+2026-11-14T17:36:27.3454653Z remote: Compressing objects:  13% (14/102)        
+2026-11-14T17:36:27.3455306Z remote: Compressing objects:  14% (15/102)        
+2026-11-14T17:36:27.3455955Z remote: Compressing objects:  15% (16/102)        
+2026-11-14T17:36:27.3457087Z remote: Compressing objects:  16% (17/102)        
+2026-11-14T17:36:27.3457760Z remote: Compressing objects:  17% (18/102)        
+2026-11-14T17:36:27.3458421Z remote: Compressing objects:  18% (19/102)        
+2026-11-14T17:36:27.3597429Z remote: Compressing objects:  19% (20/102)        
+2026-11-14T17:36:27.3599494Z remote: Compressing objects:  20% (21/102)        
+2026-11-14T17:36:27.3600925Z remote: Compressing objects:  21% (22/102)        
+2026-11-14T17:36:27.3602228Z remote: Compressing objects:  22% (23/102)        
+2026-11-14T17:36:27.3603627Z remote: Compressing objects:  23% (24/102)        
+2026-11-14T17:36:27.3605018Z remote: Compressing objects:  24% (25/102)        
+2026-11-14T17:36:27.3606429Z remote: Compressing objects:  25% (26/102)        
+2026-11-14T17:36:27.3608176Z remote: Compressing objects:  26% (27/102)        
+2026-11-14T17:36:27.3609573Z remote: Compressing objects:  27% (28/102)        
+2026-11-14T17:36:27.3610962Z remote: Compressing objects:  28% (29/102)        
+2026-11-14T17:36:27.3612352Z remote: Compressing objects:  29% (30/102)        
+2026-11-14T17:36:27.3613738Z remote: Compressing objects:  30% (31/102)        
+2026-11-14T17:36:27.3615117Z remote: Compressing objects:  31% (32/102)        
+2026-11-14T17:36:27.3616237Z remote: Compressing objects:  32% (33/102)        
+2026-11-14T17:36:27.3617288Z remote: Compressing objects:  33% (34/102)        
+2026-11-14T17:36:27.3618124Z remote: Compressing objects:  34% (35/102)        
+2026-11-14T17:36:27.3618868Z remote: Compressing objects:  35% (36/102)        
+2026-11-14T17:36:27.3619602Z remote: Compressing objects:  36% (37/102)        
+2026-11-14T17:36:27.3620336Z remote: Compressing objects:  37% (38/102)        
+2026-11-14T17:36:27.3621061Z remote: Compressing objects:  38% (39/102)        
+2026-11-14T17:36:27.3621790Z remote: Compressing objects:  39% (40/102)        
+2026-11-14T17:36:27.3622500Z remote: Compressing objects:  40% (41/102)        
+2026-11-14T17:36:27.3623223Z remote: Compressing objects:  41% (42/102)        
+2026-11-14T17:36:27.3624123Z remote: Compressing objects:  42% (43/102)        
+2026-11-14T17:36:27.3625599Z remote: Compressing objects:  43% (44/102)        
+2026-11-14T17:36:27.3627043Z remote: Compressing objects:  44% (45/102)        
+2026-11-14T17:36:27.3627883Z remote: Compressing objects:  45% (46/102)        
+2026-11-14T17:36:27.3628629Z remote: Compressing objects:  46% (47/102)        
+2026-11-14T17:36:27.3629360Z remote: Compressing objects:  47% (48/102)        
+2026-11-14T17:36:27.3630104Z remote: Compressing objects:  48% (49/102)        
+2026-11-14T17:36:27.3630930Z remote: Compressing objects:  49% (50/102)        
+2026-11-14T17:36:27.3631672Z remote: Compressing objects:  50% (51/102)        
+2026-11-14T17:36:27.3632390Z remote: Compressing objects:  51% (53/102)        
+2026-11-14T17:36:27.3633114Z remote: Compressing objects:  52% (54/102)        
+2026-11-14T17:36:27.3633844Z remote: Compressing objects:  53% (55/102)        
+2026-11-14T17:36:27.3634564Z remote: Compressing objects:  54% (56/102)        
+2026-11-14T17:36:27.3635307Z remote: Compressing objects:  55% (57/102)        
+2026-11-14T17:36:27.3636027Z remote: Compressing objects:  56% (58/102)        
+2026-11-14T17:36:27.3636982Z remote: Compressing objects:  57% (59/102)        
+2026-11-14T17:36:27.3637721Z remote: Compressing objects:  58% (60/102)        
+2026-11-14T17:36:27.3638440Z remote: Compressing objects:  59% (61/102)        
+2026-11-14T17:36:27.3639154Z remote: Compressing objects:  60% (62/102)        
+2026-11-14T17:36:27.3639870Z remote: Compressing objects:  61% (63/102)        
+2026-11-14T17:36:27.3640591Z remote: Compressing objects:  62% (64/102)        
+2026-11-14T17:36:27.3641311Z remote: Compressing objects:  63% (65/102)        
+2026-11-14T17:36:27.3642049Z remote: Compressing objects:  64% (66/102)        
+2026-11-14T17:36:27.3642769Z remote: Compressing objects:  65% (67/102)        
+2026-11-14T17:36:27.3643481Z remote: Compressing objects:  66% (68/102)        
+2026-11-14T17:36:27.3644411Z remote: Compressing objects:  67% (69/102)        
+2026-11-14T17:36:27.3645144Z remote: Compressing objects:  68% (70/102)        
+2026-11-14T17:36:27.3645852Z remote: Compressing objects:  69% (71/102)        
+2026-11-14T17:36:27.3646825Z remote: Compressing objects:  70% (72/102)        
+2026-11-14T17:36:27.3647590Z remote: Compressing objects:  71% (73/102)        
+2026-11-14T17:36:27.3648308Z remote: Compressing objects:  72% (74/102)        
+2026-11-14T17:36:27.3649422Z remote: Compressing objects:  73% (75/102)        
+2026-11-14T17:36:27.3650190Z remote: Compressing objects:  74% (76/102)        
+2026-11-14T17:36:27.3650913Z remote: Compressing objects:  75% (77/102)        
+2026-11-14T17:36:27.3651627Z remote: Compressing objects:  76% (78/102)        
+2026-11-14T17:36:27.3652355Z remote: Compressing objects:  77% (79/102)        
+2026-11-14T17:36:27.3653246Z remote: Compressing objects:  78% (80/102)        
+2026-11-14T17:36:27.3654318Z remote: Compressing objects:  79% (81/102)        
+2026-11-14T17:36:27.3655180Z remote: Compressing objects:  80% (82/102)        
+2026-11-14T17:36:27.3656155Z remote: Compressing objects:  81% (83/102)        
+2026-11-14T17:36:27.3657735Z remote: Compressing objects:  82% (84/102)        
+2026-11-14T17:36:27.3659047Z remote: Compressing objects:  83% (85/102)        
+2026-11-14T17:36:27.3660311Z remote: Compressing objects:  84% (86/102)        
+2026-11-14T17:36:27.3661570Z remote: Compressing objects:  85% (87/102)        
+2026-11-14T17:36:27.3662814Z remote: Compressing objects:  86% (88/102)        
+2026-11-14T17:36:27.3664053Z remote: Compressing objects:  87% (89/102)        
+2026-11-14T17:36:27.3665279Z remote: Compressing objects:  88% (90/102)        
+2026-11-14T17:36:27.3666660Z remote: Compressing objects:  89% (91/102)        
+2026-11-14T17:36:27.3667992Z remote: Compressing objects:  90% (92/102)        
+2026-11-14T17:36:27.3669228Z remote: Compressing objects:  91% (93/102)        
+2026-11-14T17:36:27.3670478Z remote: Compressing objects:  92% (94/102)        
+2026-11-14T17:36:27.3671782Z remote: Compressing objects:  93% (95/102)        
+2026-11-14T17:36:27.3673210Z remote: Compressing objects:  94% (96/102)        
+2026-11-14T17:36:27.3674576Z remote: Compressing objects:  95% (97/102)        
+2026-11-14T17:36:27.3675844Z remote: Compressing objects:  96% (98/102)        
+2026-11-14T17:36:27.3677290Z remote: Compressing objects:  97% (99/102)        
+2026-11-14T17:36:27.3678553Z remote: Compressing objects:  98% (100/102)        
+2026-11-14T17:36:27.3679802Z remote: Compressing objects:  99% (101/102)        
+2026-11-14T17:36:27.3681034Z remote: Compressing objects: 100% (102/102)        
+2026-11-14T17:36:27.3682419Z remote: Compressing objects: 100% (102/102), done.        
+2026-11-14T17:36:27.3683683Z Receiving objects:   0% (1/111)
+2026-11-14T17:36:27.3684652Z Receiving objects:   1% (2/111)
+2026-11-14T17:36:27.3685599Z Receiving objects:   2% (3/111)
+2026-11-14T17:36:27.3686694Z Receiving objects:   3% (4/111)
+2026-11-14T17:36:27.3687666Z Receiving objects:   4% (5/111)
+2026-11-14T17:36:27.3688638Z Receiving objects:   5% (6/111)
+2026-11-14T17:36:27.3689621Z Receiving objects:   6% (7/111)
+2026-11-14T17:36:27.3690569Z Receiving objects:   7% (8/111)
+2026-11-14T17:36:27.3691519Z Receiving objects:   8% (9/111)
+2026-11-14T17:36:27.3692470Z Receiving objects:   9% (10/111)
+2026-11-14T17:36:27.3693441Z Receiving objects:  10% (12/111)
+2026-11-14T17:36:27.3694406Z Receiving objects:  11% (13/111)
+2026-11-14T17:36:27.3695370Z Receiving objects:  12% (14/111)
+2026-11-14T17:36:27.3696331Z Receiving objects:  13% (15/111)
+2026-11-14T17:36:27.3697475Z Receiving objects:  14% (16/111)
+2026-11-14T17:36:27.3698450Z Receiving objects:  15% (17/111)
+2026-11-14T17:36:27.3699442Z Receiving objects:  16% (18/111)
+2026-11-14T17:36:27.3700415Z Receiving objects:  17% (19/111)
+2026-11-14T17:36:27.3701383Z Receiving objects:  18% (20/111)
+2026-11-14T17:36:27.3702355Z Receiving objects:  19% (22/111)
+2026-11-14T17:36:27.3703353Z Receiving objects:  20% (23/111)
+2026-11-14T17:36:27.3704551Z Receiving objects:  21% (24/111)
+2026-11-14T17:36:27.3705553Z Receiving objects:  22% (25/111)
+2026-11-14T17:36:27.3706704Z Receiving objects:  23% (26/111)
+2026-11-14T17:36:27.3707694Z Receiving objects:  24% (27/111)
+2026-11-14T17:36:27.3708663Z Receiving objects:  25% (28/111)
+2026-11-14T17:36:27.3709623Z Receiving objects:  26% (29/111)
+2026-11-14T17:36:27.3710582Z Receiving objects:  27% (30/111)
+2026-11-14T17:36:27.3711598Z Receiving objects:  28% (32/111)
+2026-11-14T17:36:27.3712660Z Receiving objects:  29% (33/111)
+2026-11-14T17:36:27.3713702Z Receiving objects:  30% (34/111)
+2026-11-14T17:36:27.3714701Z Receiving objects:  31% (35/111)
+2026-11-14T17:36:27.3715728Z Receiving objects:  32% (36/111)
+2026-11-14T17:36:27.3716955Z Receiving objects:  33% (37/111)
+2026-11-14T17:36:27.3718007Z Receiving objects:  34% (38/111)
+2026-11-14T17:36:27.3719028Z Receiving objects:  35% (39/111)
+2026-11-14T17:36:27.3720042Z Receiving objects:  36% (40/111)
+2026-11-14T17:36:27.3721040Z Receiving objects:  37% (42/111)
+2026-11-14T17:36:27.3722053Z Receiving objects:  38% (43/111)
+2026-11-14T17:36:27.3723056Z Receiving objects:  39% (44/111)
+2026-11-14T17:36:27.3724028Z Receiving objects:  40% (45/111)
+2026-11-14T17:36:27.3724992Z Receiving objects:  41% (46/111)
+2026-11-14T17:36:27.3725994Z Receiving objects:  42% (47/111)
+2026-11-14T17:36:27.3727157Z Receiving objects:  43% (48/111)
+2026-11-14T17:36:27.3728132Z Receiving objects:  44% (49/111)
+2026-11-14T17:36:27.3729095Z Receiving objects:  45% (50/111)
+2026-11-14T17:36:27.3730090Z Receiving objects:  46% (52/111)
+2026-11-14T17:36:27.3731063Z Receiving objects:  47% (53/111)
+2026-11-14T17:36:27.3732063Z Receiving objects:  48% (54/111)
+2026-11-14T17:36:27.3733042Z Receiving objects:  49% (55/111)
+2026-11-14T17:36:27.3734011Z Receiving objects:  50% (56/111)
+2026-11-14T17:36:27.3734972Z Receiving objects:  51% (57/111)
+2026-11-14T17:36:27.3735932Z Receiving objects:  52% (58/111)
+2026-11-14T17:36:27.3737180Z Receiving objects:  53% (59/111)
+2026-11-14T17:36:27.3738228Z Receiving objects:  54% (60/111)
+2026-11-14T17:36:27.3739198Z Receiving objects:  55% (62/111)
+2026-11-14T17:36:27.3740373Z Receiving objects:  56% (63/111)
+2026-11-14T17:36:27.3741377Z Receiving objects:  57% (64/111)
+2026-11-14T17:36:27.3742345Z Receiving objects:  58% (65/111)
+2026-11-14T17:36:27.3743313Z Receiving objects:  59% (66/111)
+2026-11-14T17:36:27.3744307Z Receiving objects:  60% (67/111)
+2026-11-14T17:36:27.3745271Z Receiving objects:  61% (68/111)
+2026-11-14T17:36:27.3746236Z Receiving objects:  62% (69/111)
+2026-11-14T17:36:27.3747390Z Receiving objects:  63% (70/111)
+2026-11-14T17:36:27.3748357Z Receiving objects:  64% (72/111)
+2026-11-14T17:36:27.3749305Z Receiving objects:  65% (73/111)
+2026-11-14T17:36:27.3750250Z Receiving objects:  66% (74/111)
+2026-11-14T17:36:27.3751213Z Receiving objects:  67% (75/111)
+2026-11-14T17:36:27.3752180Z Receiving objects:  68% (76/111)
+2026-11-14T17:36:27.3753148Z Receiving objects:  69% (77/111)
+2026-11-14T17:36:27.3754114Z Receiving objects:  70% (78/111)
+2026-11-14T17:36:27.3755093Z Receiving objects:  71% (79/111)
+2026-11-14T17:36:27.3756098Z Receiving objects:  72% (80/111)
+2026-11-14T17:36:27.3757240Z Receiving objects:  73% (82/111)
+2026-11-14T17:36:27.3758211Z Receiving objects:  74% (83/111)
+2026-11-14T17:36:27.3759184Z Receiving objects:  75% (84/111)
+2026-11-14T17:36:27.3760148Z Receiving objects:  76% (85/111)
+2026-11-14T17:36:27.3761116Z Receiving objects:  77% (86/111)
+2026-11-14T17:36:27.3762152Z Receiving objects:  78% (87/111)
+2026-11-14T17:36:27.3763129Z Receiving objects:  79% (88/111)
+2026-11-14T17:36:27.3764108Z Receiving objects:  80% (89/111)
+2026-11-14T17:36:27.3770962Z Receiving objects:  81% (90/111)
+2026-11-14T17:36:27.3790595Z Receiving objects:  82% (92/111)
+2026-11-14T17:36:27.3800210Z Receiving objects:  83% (93/111)
+2026-11-14T17:36:27.3812711Z Receiving objects:  84% (94/111)
+2026-11-14T17:36:27.3817725Z Receiving objects:  85% (95/111)
+2026-11-14T17:36:27.3824392Z Receiving objects:  86% (96/111)
+2026-11-14T17:36:27.3826397Z Receiving objects:  87% (97/111)
+2026-11-14T17:36:27.3828098Z Receiving objects:  88% (98/111)
+2026-11-14T17:36:27.3829187Z Receiving objects:  89% (99/111)
+2026-11-14T17:36:27.3830349Z Receiving objects:  90% (100/111)
+2026-11-14T17:36:27.3831363Z Receiving objects:  91% (102/111)
+2026-11-14T17:36:27.3832295Z Receiving objects:  92% (103/111)
+2026-11-14T17:36:27.3847173Z Receiving objects:  93% (104/111)
+2026-11-14T17:36:27.3858532Z remote: Total 111 (delta 3), reused 97 (delta 3), pack-reused 0 (from 0)        
+2026-11-14T17:36:27.3860149Z Receiving objects:  94% (105/111)
+2026-11-14T17:36:27.3861247Z Receiving objects:  95% (106/111)
+2026-11-14T17:36:27.3862314Z Receiving objects:  96% (107/111)
+2026-11-14T17:36:27.3863405Z Receiving objects:  97% (108/111)
+2026-11-14T17:36:27.3864096Z Receiving objects:  98% (109/111)
+2026-11-14T17:36:27.3864694Z Receiving objects:  99% (110/111)
+2026-11-14T17:36:27.3865273Z Receiving objects: 100% (111/111)
+2026-11-14T17:36:27.3865986Z Receiving objects: 100% (111/111), 1.26 MiB | 33.97 MiB/s, done.
+2026-11-14T17:36:27.3867540Z Resolving deltas:   0% (0/3)
+2026-11-14T17:36:27.3868702Z Resolving deltas:  33% (1/3)
+2026-11-14T17:36:27.3885514Z Resolving deltas:  66% (2/3)
+2026-11-14T17:36:27.3886449Z Resolving deltas: 100% (3/3)
+2026-11-14T17:36:27.3888101Z Resolving deltas: 100% (3/3), done.
+2026-11-14T17:36:27.3993686Z From https://github.com/CaoDucAnh563/xrwvm-fullstack_developer_capstone
+2026-11-14T17:36:27.3999322Z  * [new ref]         33220cfd8cbae90f4e6bffa432d702f63b625792 -> origin/main
+2026-11-14T17:36:27.4001983Z ##[endgroup]
+2026-11-14T17:36:27.4003462Z ##[group]Determining the checkout info
+2026-11-14T17:36:27.4004600Z ##[endgroup]
+2026-11-14T17:36:27.4005423Z ##[group]Checking out the ref
+2026-11-14T17:36:27.4007431Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-14T17:36:27.4191347Z Switched to a new branch 'main'
+2026-11-14T17:36:27.4196287Z branch 'main' set up to track 'origin/main'.
+2026-11-14T17:36:27.4202902Z ##[endgroup]
+2026-11-14T17:36:27.4245730Z [command]/usr/bin/git log -1 --format='%H'
+2026-11-14T17:36:27.4271896Z '33220cfd8cbae90f4e6bffa432d702f63b625792'
+2026-11-14T17:36:27.4596789Z ##[group]Run actions/setup-python@v4
+2026-11-14T17:36:27.4597491Z with:
+2026-11-14T17:36:27.4598203Z   python-version: 3.10
+2026-11-14T17:36:27.4598760Z   check-latest: false
+2026-11-14T17:36:27.4602724Z   token: ***
+2026-11-14T17:36:27.4603225Z   update-environment: true
+2026-11-14T17:36:27.4603791Z   allow-prereleases: false
+2026-11-14T17:36:27.4604309Z ##[endgroup]
+2026-11-14T17:36:27.6059904Z ##[group]Installed versions
+2026-11-14T17:36:27.6161262Z Version 3.10 was not found in the local cache
+2026-11-14T17:36:27.6315905Z (node:2870) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-14T17:36:27.6318770Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-14T17:36:28.2722440Z Version 3.10 is available for downloading
+2026-11-14T17:36:28.2727223Z Download from "https://github.com/actions/python-versions/releases/download/3.10.22-36876129702/python-3.10.22-linux-26.04-x64.tar.gz"
+2026-11-14T17:36:28.7620906Z Extract downloaded archive
+2026-11-14T17:36:28.7773576Z [command]/usr/bin/tar xz --warning=no-unknown-keyword -C /home/runner/work/_temp/8a01da9e-975e-4f42-af90-f833db076c45 -f /home/runner/work/_temp/9dfb651c-37b1-4e3e-b4c5-9af2c1f8801c
+2026-11-14T17:36:29.6577274Z Execute installation script
+2026-11-14T17:36:29.6720773Z Check if Python hostedtoolcache folder exist...
+2026-11-14T17:36:29.6721545Z Create Python 3.10.22 folder
+2026-11-14T17:36:29.6748409Z Copy Python binaries to hostedtoolcache folder
+2026-11-14T17:36:30.1297582Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+2026-11-14T17:36:30.1403912Z Upgrading pip...
+2026-11-14T17:36:31.9144630Z Collecting pip
+2026-11-14T17:36:31.9494856Z Downloading pip-26.3-py3-none-any.whl (2.0 MB)
+2026-11-14T17:36:31.9837718Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 61.4 MB/s eta 0:00:00
+2026-11-14T17:36:31.9838304Z 
+2026-11-14T17:36:32.0428098Z Installing collected packages: pip
+2026-11-14T17:36:32.0429817Z Attempting uninstall: pip
+2026-11-14T17:36:32.0436707Z Found existing installation: pip 23.0.1
+2026-11-14T17:36:32.2129633Z Uninstalling pip-23.0.1:
+2026-11-14T17:36:32.2201177Z Successfully uninstalled pip-23.0.1
+2026-11-14T17:36:33.1075079Z Successfully installed pip-26.3
+2026-11-14T17:36:33.1585758Z Create complete file
+2026-11-14T17:36:33.1652455Z Successfully set up CPython (3.10.22)
+2026-11-14T17:36:33.1653343Z ##[endgroup]
+2026-11-14T17:36:33.1866339Z ##[group]Run python -m pip install --upgrade pip
+2026-11-14T17:36:33.1867174Z [36;1mpython -m pip install --upgrade pip[0m
+2026-11-14T17:36:33.1867489Z [36;1mpip install flake8[0m
+2026-11-14T17:36:33.1867857Z [36;1mif [ -f requirements.txt ]; then pip install -r requirements.txt; fi[0m
+2026-11-14T17:36:33.1923108Z shell: /usr/bin/bash -e {0}
+2026-11-14T17:36:33.1923409Z env:
+2026-11-14T17:36:33.1923701Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-14T17:36:33.1924158Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig
+2026-11-14T17:36:33.1924614Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-14T17:36:33.1924992Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-14T17:36:33.1925375Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-14T17:36:33.1925769Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib
+2026-11-14T17:36:33.1926091Z ##[endgroup]
+2026-11-14T17:36:33.5060642Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.10.22/x64/lib/python3.10/site-packages (26.3)
+2026-11-14T17:36:34.0375445Z Collecting flake8
+2026-11-14T17:36:34.0689436Z   Downloading flake8-7.4.1-py2.py3-none-any.whl.metadata (3.8 kB)
+2026-11-14T17:36:34.0931973Z Collecting mccabe<0.8.0,>=0.7.0 (from flake8)
+2026-11-14T17:36:34.1002204Z   Downloading mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+2026-11-14T17:36:34.1157876Z Collecting pycodestyle<2.16.0,>=2.15.0 (from flake8)
+2026-11-14T17:36:34.1233246Z   Downloading pycodestyle-2.15.0-py2.py3-none-any.whl.metadata (4.5 kB)
+2026-11-14T17:36:34.1405287Z Collecting pyflakes<4.1.0,>=4.0.0 (from flake8)
+2026-11-14T17:36:34.1475059Z   Downloading pyflakes-4.0.3-py2.py3-none-any.whl.metadata (3.7 kB)
+2026-11-14T17:36:34.1579370Z Downloading flake8-7.4.1-py2.py3-none-any.whl (57 kB)
+2026-11-14T17:36:34.1721902Z Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+2026-11-14T17:36:34.1834992Z Downloading pycodestyle-2.15.0-py2.py3-none-any.whl (31 kB)
+2026-11-14T17:36:34.1927363Z Downloading pyflakes-4.0.3-py2.py3-none-any.whl (66 kB)
+2026-11-14T17:36:34.2303567Z Installing collected packages: pyflakes, pycodestyle, mccabe, flake8
+2026-11-14T17:36:34.3390778Z 
+2026-11-14T17:36:34.3404941Z Successfully installed flake8-7.4.1 mccabe-0.7.0 pycodestyle-2.15.0 pyflakes-4.0.3
+2026-11-14T17:36:34.3858511Z ##[group]Run # stop the build if there are Python syntax errors or undefined names
+2026-11-14T17:36:34.3859117Z [36;1m# stop the build if there are Python syntax errors or undefined names[0m
+2026-11-14T17:36:34.3859645Z [36;1mflake8 . --count --select=E9,F63,F7,F82 --show-source --statistics[0m
+2026-11-14T17:36:34.3860187Z [36;1m# exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide[0m
+2026-11-14T17:36:34.3860782Z [36;1mflake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics[0m
+2026-11-14T17:36:34.3911922Z shell: /usr/bin/bash -e {0}
+2026-11-14T17:36:34.3912174Z env:
+2026-11-14T17:36:34.3912442Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-14T17:36:34.3912921Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig
+2026-11-14T17:36:34.3913347Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-14T17:36:34.3913759Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-14T17:36:34.3914151Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-14T17:36:34.3914715Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib
+2026-11-14T17:36:34.3915033Z ##[endgroup]
+2026-11-14T17:36:34.5785668Z 0
+2026-11-14T17:36:34.7431083Z ./server/djangoapp/admin.py:5:30: W292 no newline at end of file
+2026-11-14T17:36:34.7431709Z ./server/djangoapp/migrations/0001_initial.py:30:128: E501 line too long (139 > 127 characters)
+2026-11-14T17:36:34.7432367Z ./server/djangoapp/migrations/0001_initial.py:31:128: E501 line too long (169 > 127 characters)
+2026-11-14T17:36:34.7432978Z ./server/djangoapp/models.py:2:1: F401 'django.utils.timezone.now' imported but unused
+2026-11-14T17:36:34.7433491Z ./server/djangoapp/models.py:33:51: W292 no newline at end of file
+2026-11-14T17:36:34.7433947Z ./server/djangoapp/populate.py:43:10: W292 no newline at end of file
+2026-11-14T17:36:34.7434383Z ./server/djangoapp/restapis.py:49:31: W292 no newline at end of file
+2026-11-14T17:36:34.7434826Z ./server/djangoapp/urls.py:17:66: W292 no newline at end of file
+2026-11-14T17:36:34.7435343Z ./server/djangoapp/views.py:5:1: F401 'django.http.HttpResponseRedirect' imported but unused
+2026-11-14T17:36:34.7435923Z ./server/djangoapp/views.py:5:1: F401 'django.http.HttpResponse' imported but unused
+2026-11-14T17:36:34.7436450Z ./server/djangoapp/views.py:7:1: F811 redefinition of unused 'render' from line 4
+2026-11-14T17:36:34.7437500Z ./server/djangoapp/views.py:7:1: F401 'django.shortcuts.render' imported but unused
+2026-11-14T17:36:34.7438126Z ./server/djangoapp/views.py:7:1: F401 'django.shortcuts.get_object_or_404' imported but unused
+2026-11-14T17:36:34.7438692Z ./server/djangoapp/views.py:7:1: F401 'django.shortcuts.redirect' imported but unused
+2026-11-14T17:36:34.7439223Z ./server/djangoapp/views.py:9:1: F401 'django.contrib.messages' imported but unused
+2026-11-14T17:36:34.7439735Z ./server/djangoapp/views.py:10:1: F401 'datetime.datetime' imported but unused
+2026-11-14T17:36:34.7440206Z ./server/djangoapp/views.py:44:1: E303 too many blank lines (3)
+2026-11-14T17:36:34.7440648Z ./server/djangoapp/views.py:49:1: E302 expected 2 blank lines, found 1
+2026-11-14T17:36:34.7441100Z ./server/djangoapp/views.py:78:1: E302 expected 2 blank lines, found 0
+2026-11-14T17:36:34.7441550Z ./server/djangoapp/views.py:119:1: E302 expected 2 blank lines, found 0
+2026-11-14T17:36:34.7441992Z ./server/djangoapp/views.py:127:45: W292 no newline at end of file
+2026-11-14T17:36:34.7442407Z ./server/djangoproj/urls.py:17:68: W292 no newline at end of file
+2026-11-14T17:36:34.7442760Z 3     E302 expected 2 blank lines, found 1
+2026-11-14T17:36:34.7443036Z 1     E303 too many blank lines (3)
+2026-11-14T17:36:34.7443304Z 2     E501 line too long (139 > 127 characters)
+2026-11-14T17:36:34.7443638Z 8     F401 'django.utils.timezone.now' imported but unused
+2026-11-14T17:36:34.7443993Z 1     F811 redefinition of unused 'render' from line 4
+2026-11-14T17:36:34.7444293Z 7     W292 no newline at end of file
+2026-11-14T17:36:34.7444916Z 22
+2026-11-14T17:36:34.7644452Z ##[group]Run actions/setup-node@v3
+2026-11-14T17:36:34.7644749Z with:
+2026-11-14T17:36:34.7644941Z   node-version: 18
+2026-11-14T17:36:34.7645150Z   always-auth: false
+2026-11-14T17:36:34.7645361Z   check-latest: false
+2026-11-14T17:36:34.7648133Z   token: ***
+2026-11-14T17:36:34.7648348Z env:
+2026-11-14T17:36:34.7648641Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-14T17:36:34.7649072Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig
+2026-11-14T17:36:34.7649505Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-14T17:36:34.7649886Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-14T17:36:34.7650262Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-14T17:36:34.7650646Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib
+2026-11-14T17:36:34.7650966Z ##[endgroup]
+2026-11-14T17:36:34.9203305Z Attempting to download 18...
+2026-11-14T17:36:34.9314994Z (node:2992) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-14T17:36:34.9316449Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-14T17:36:35.3624860Z Acquiring 18.20.8 - x64 from https://github.com/actions/node-versions/releases/download/18.20.8-14110393767/node-18.20.8-linux-x64.tar.gz
+2026-11-14T17:36:35.7507154Z Extracting ...
+2026-11-14T17:36:35.7670836Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword -C /home/runner/work/_temp/b14389ec-902c-44f8-99a0-7f05bb61d6a3 -f /home/runner/work/_temp/1221e349-d4c4-49c0-a343-2b4c59526b57
+2026-11-14T17:36:36.4006952Z Adding to the cache ...
+2026-11-14T17:36:38.0076438Z ##[group]Environment details
+2026-11-14T17:36:38.2449300Z node: v18.20.8
+2026-11-14T17:36:38.2449595Z npm: 10.8.2
+2026-11-14T17:36:38.2449788Z yarn: 1.22.22
+2026-11-14T17:36:38.2450230Z ##[endgroup]
+2026-11-14T17:36:38.2636830Z ##[group]Run cd server/frontend
+2026-11-14T17:36:38.2637161Z [36;1mcd server/frontend[0m
+2026-11-14T17:36:38.2637488Z [36;1mif [ -f package.json ]; then npm install; fi[0m
+2026-11-14T17:36:38.2686744Z shell: /usr/bin/bash -e {0}
+2026-11-14T17:36:38.2687009Z env:
+2026-11-14T17:36:38.2687279Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-14T17:36:38.2687729Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig
+2026-11-14T17:36:38.2688159Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-14T17:36:38.2688542Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-14T17:36:38.2688926Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-14T17:36:38.2689307Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib
+2026-11-14T17:36:38.2689626Z ##[endgroup]
+2026-11-14T17:36:42.4340879Z npm warn deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+2026-11-14T17:36:42.7684163Z npm warn deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+2026-11-14T17:36:42.7988400Z npm warn deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
+2026-11-14T17:36:42.8899052Z npm warn deprecated rollup-plugin-terser@7.0.2: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-terser
+2026-11-14T17:36:43.4715343Z npm warn deprecated workbox-cacheable-response@6.6.0: workbox-background-sync@6.6.0
+2026-11-14T17:36:45.8512229Z npm warn deprecated svgo@1.3.2: This SVGO version is no longer supported. Upgrade to v2.x.x.
+2026-11-14T17:36:46.6093630Z npm warn deprecated @babel/plugin-proposal-private-property-in-object@7.21.11: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-property-in-object instead.
+2026-11-14T17:36:46.6315586Z npm warn deprecated @babel/plugin-proposal-numeric-separator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-numeric-separator instead.
+2026-11-14T17:36:46.6319410Z npm warn deprecated @babel/plugin-proposal-private-methods@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-methods instead.
+2026-11-14T17:36:46.6323089Z npm warn deprecated @babel/plugin-proposal-nullish-coalescing-operator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-nullish-coalescing-operator instead.
+2026-11-14T17:36:46.6327618Z npm warn deprecated @babel/plugin-proposal-class-properties@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
+2026-11-14T17:36:46.6331427Z npm warn deprecated @babel/plugin-proposal-optional-chaining@7.21.0: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-chaining instead.
+2026-11-14T17:36:58.8729813Z 
+2026-11-14T17:36:58.8730757Z added 1534 packages, and audited 1535 packages in 21s
+2026-11-14T17:36:58.8731360Z 
+2026-11-14T17:36:58.8731762Z 246 packages are looking for funding
+2026-11-14T17:36:58.8732405Z   run `npm fund` for details
+2026-11-14T17:36:58.9889699Z 
+2026-11-14T17:36:58.9890769Z 80 vulnerabilities (21 low, 20 moderate, 35 high, 4 critical)
+2026-11-14T17:36:58.9891420Z 
+2026-11-14T17:36:58.9891907Z To address issues that do not require attention, run:
+2026-11-14T17:36:58.9892637Z   npm audit fix
+2026-11-14T17:36:58.9892907Z 
+2026-11-14T17:36:58.9894141Z To address all issues (including breaking changes), run:
+2026-11-14T17:36:58.9894966Z   npm audit fix --force
+2026-11-14T17:36:58.9895303Z 
+2026-11-14T17:36:58.9895601Z Run `npm audit` for details.
+2026-11-14T17:36:59.0357295Z ##[group]Run cd server/frontend
+2026-11-14T17:36:59.0357630Z [36;1mcd server/frontend[0m
+2026-11-14T17:36:59.0358008Z [36;1mif [ -f package.json ]; then CI=false npm run build --if-present; fi[0m
+2026-11-14T17:36:59.0410042Z shell: /usr/bin/bash -e {0}
+2026-11-14T17:36:59.0410302Z env:
+2026-11-14T17:36:59.0410563Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-14T17:36:59.0411029Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig
+2026-11-14T17:36:59.0411469Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-14T17:36:59.0411849Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-14T17:36:59.0412241Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-14T17:36:59.0412649Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib
+2026-11-14T17:36:59.0412974Z ##[endgroup]
+2026-11-14T17:36:59.3970485Z 
+2026-11-14T17:36:59.3970965Z > usermgmt@0.1.0 build
+2026-11-14T17:36:59.3971610Z > react-scripts build
+2026-11-14T17:36:59.3971877Z 
+2026-11-14T17:37:00.6864663Z Creating an optimized production build...
+2026-11-14T17:37:00.8088056Z Browserslist: caniuse-lite is outdated. Please run:
+2026-11-14T17:37:00.8088779Z   npx update-browserslist-db@latest
+2026-11-14T17:37:00.8089608Z   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+2026-11-14T17:37:07.3380564Z Browserslist: caniuse-lite is outdated. Please run:
+2026-11-14T17:37:07.3381641Z   npx update-browserslist-db@latest
+2026-11-14T17:37:07.3382388Z   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+2026-11-14T17:37:08.5778899Z Compiled with warnings.
+2026-11-14T17:37:08.5779264Z 
+2026-11-14T17:37:08.5779437Z Warning
+2026-11-14T17:37:08.5780558Z (6:27710) autoprefixer: Replace color-adjust to print-color-adjust. The color-adjust shorthand is currently deprecated.
+2026-11-14T17:37:08.5781370Z 
+2026-11-14T17:37:08.5781537Z [eslint] 
+2026-11-14T17:37:08.5782001Z src/components/Dealers/Dealer.jsx
+2026-11-14T17:37:08.5783209Z   Line 67:5:  React Hook useEffect has missing dependencies: 'get_dealer', 'get_reviews', and 'post_review'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+2026-11-14T17:37:08.5783943Z 
+2026-11-14T17:37:08.5784136Z src/components/Dealers/Dealers.jsx
+2026-11-14T17:37:08.5784886Z   Line 47:5:  React Hook useEffect has a missing dependency: 'get_dealers'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+2026-11-14T17:37:08.5785429Z 
+2026-11-14T17:37:08.5785610Z src/components/Dealers/PostReview.jsx
+2026-11-14T17:37:08.5786369Z   Line 90:5:  React Hook useEffect has missing dependencies: 'get_cars' and 'get_dealer'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+2026-11-14T17:37:08.5787224Z 
+2026-11-14T17:37:08.5787504Z Search for the keywords to learn more about each warning.
+2026-11-14T17:37:08.5787992Z To ignore, add // eslint-disable-next-line to the line before.
+2026-11-14T17:37:08.5788545Z 
+2026-11-14T17:37:08.5788671Z File sizes after gzip:
+2026-11-14T17:37:08.5788815Z 
+2026-11-14T17:37:08.5904825Z   60.25 kB  build/static/js/main.2e625e64.js
+2026-11-14T17:37:08.5905837Z   23.94 kB  build/static/css/main.d9716fdc.css
+2026-11-14T17:37:08.5906278Z 
+2026-11-14T17:37:08.5909129Z The project was built assuming it is hosted at /.
+2026-11-14T17:37:08.5910623Z You can control this with the homepage field in your package.json.
+2026-11-14T17:37:08.5911223Z 
+2026-11-14T17:37:08.5911572Z The build folder is ready to be deployed.
+2026-11-14T17:37:08.5912196Z You may serve it with a static server:
+2026-11-14T17:37:08.5912516Z 
+2026-11-14T17:37:08.5912677Z   npm install -g serve
+2026-11-14T17:37:08.5913079Z   serve -s build
+2026-11-14T17:37:08.5913969Z 
+2026-11-14T17:37:08.5914548Z Find out more about deployment here:
+2026-11-14T17:37:08.5914879Z 
+2026-11-14T17:37:08.5915067Z   https://cra.link/deployment
+2026-11-14T17:37:08.5915342Z 
+2026-11-14T17:37:08.6456268Z npm notice
+2026-11-14T17:37:08.6457462Z npm notice New major version of npm available! 10.8.2 -> 12.2.2
+2026-11-14T17:37:08.6458136Z npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+2026-11-14T17:37:08.6458694Z npm notice To update run: npm install -g npm@12.2.2
+2026-11-14T17:37:08.6459039Z npm notice
+2026-11-14T17:37:08.6588005Z Post job cleanup.
+2026-11-14T17:37:08.7896066Z (node:3094) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-14T17:37:08.7897360Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-14T17:37:08.8060689Z Post job cleanup.
+2026-11-14T17:37:08.9278604Z (node:3102) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-14T17:37:08.9279668Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-14T17:37:08.9478644Z Post job cleanup.
+2026-11-14T17:37:09.0174242Z (node:3110) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-14T17:37:09.0175084Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-14T17:37:09.0207210Z [command]/usr/bin/git version
+2026-11-14T17:37:09.0244500Z git version 2.56.1
+2026-11-14T17:37:09.0281454Z Temporarily overriding HOME='/home/runner/work/_temp/a2edb8dc-b23c-45db-9ac3-48d8ad9233e8' before making global git config changes
+2026-11-14T17:37:09.0282582Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-14T17:37:09.0285447Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone
+2026-11-14T17:37:09.0320678Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-14T17:37:09.0352471Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-14T17:37:09.0639683Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-14T17:37:09.0668539Z http.https://github.com/.extraheader
+2026-11-14T17:37:09.0677371Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-14T17:37:09.0719644Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-14T17:37:09.1143222Z Cleaning up orphan processes
+2026-11-14T17:37:09.1558377Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v3, actions/setup-node@v3, actions/setup-python@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
